@@ -1,0 +1,10 @@
+.container {
+	background-image: url('/images/bg.jpg');
+	background-size: cover;
+	height: 400px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

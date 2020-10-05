@@ -1,10 +1,13 @@
 import React from 'react';
+import CountryPicker from '../../features/components/CountryPicker/CountryPicker';
+import Hero from '../../features/components/Hero/Hero';
 import styles from './App.module.css';
 
 function App() {
 	return (
 		<div className={styles.App}>
-			<h1>App</h1>
+			<Hero />
+			<CountryPicker />
 		</div>
 	);
 }
