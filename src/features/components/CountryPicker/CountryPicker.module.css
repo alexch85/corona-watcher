@@ -5,6 +5,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #ffffff;
+	color: #15ffc2;
 	align-self: flex-end;
+}
+
+.container p {
+	margin: 0 10px;
+}
+
+.container select {
+	width: 200px;
 }
