@@ -1,0 +1,10 @@
+.container {
+	width: 300px;
+	padding: 20px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+.container + .container {
+	border-left: 1px solid #c2bfbf;
+}

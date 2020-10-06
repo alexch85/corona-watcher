@@ -8,7 +8,7 @@ export default function CountryPicker() {
 		<div className={styles.container}>
 			<LanguageIcon size='1.3em' /> <p>Select Region:</p>
 			<FormControl className={styles.formControl}>
-				<NativeSelect variant='light' color='primary' defaultValue=''>
+				<NativeSelect color='primary' defaultValue=''>
 					<option value=''>Global</option>
 				</NativeSelect>
 			</FormControl>
