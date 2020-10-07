@@ -1,12 +1,13 @@
 import { Typography } from '@material-ui/core';
 import React from 'react';
+import CountUp from 'react-countup';
 import styles from './DataBox.module.css';
 
 export default function DataBox({ ctgColor, category, number }) {
 	return (
 		<div className={styles.container}>
-			<Typography variant='h3' color='secondary'>
-				390,229
+			<Typography variant='h4' color='secondary'>
+				<CountUp start={0} end={number} duration={1.5} separator=',' />
 			</Typography>
 			<div className={styles.categoryBox}>
 				<div
@@ -23,7 +24,9 @@ export default function DataBox({ ctgColor, category, number }) {
 				</Typography>
 			</div>
 
-			<Typography color='secondary'>Total recovered form covid-19 by {new Date().toDateString()}</Typography>
+			<Typography color='secondary'>
+				Total {category} from covid-19 by {new Date().toDateString()}
+			</Typography>
 		</div>
 	);
 }
