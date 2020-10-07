@@ -28,3 +28,31 @@ export const fetchCountries = async () => {
 		alert('Something went wrong');
 	}
 };
+
+function getValues(valuesType) {
+	const values = Object.values(valuesType).map((value) => value);
+	return values;
+}
+
+export const fetchDailyData = async () => {
+	try {
+		const {
+			data: { cases, deaths, recovered },
+		} = await axios.get('https://disease.sh/v3/covid-19/historical/all?lastdays=70');
+		const datesArray = Object.keys(cases).map((key) => key);
+		const casesArray = getValues(cases);
+		const deathsArray = getValues(deaths);
+		const recoveredArray = getValues(recovered);
+
+		const modifiedData = {
+			datesArray: datesArray,
+			casesArray: casesArray,
+			deathsArray: deathsArray,
+			recoveredArray: recoveredArray,
+		};
+		console.log(modifiedData);
+		return modifiedData;
+	} catch (error) {
+		alert('Something went wrong...');
+	}
+};

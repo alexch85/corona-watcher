@@ -5,3 +5,11 @@ body {
 	font-family: sans-serif;
 	text-align: center;
 }
+
+.AppContent {
+	max-width: 1000px;
+	display: flex;
+	flex-flow: column;
+	margin: 10px auto 40px;
+	padding: 0 20px;
+}
