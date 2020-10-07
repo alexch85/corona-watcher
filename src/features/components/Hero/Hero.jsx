@@ -5,7 +5,7 @@ import styles from './Hero.module.css';
 export default function Hero() {
 	return (
 		<div className={styles.container}>
-			<img alt='logo' src='/images/cw-logo.svg' width='400px' />
+			<img alt='logo' src='/images/cw-logo.svg' />
 		</div>
 	);
 }

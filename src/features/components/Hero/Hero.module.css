@@ -9,8 +9,21 @@
 	align-items: center;
 }
 
+.container img {
+	width: 400px;
+}
+
 @media (max-width: 1570px) {
 	.container {
 		background-image: url('/images/bg.jpg');
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		height: 200px;
+	}
+	.container img {
+		width: 300px;
 	}
 }

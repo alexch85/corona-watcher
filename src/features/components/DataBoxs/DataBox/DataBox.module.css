@@ -1,4 +1,4 @@
-.container {
+.dataBoxContainer {
 	width: 300px;
 	padding: 20px;
 	display: flex;
@@ -6,11 +6,18 @@
 	align-items: center;
 }
 
-.container + .container {
+.dataBoxContainer + .dataBoxContainer {
 	border-left: 1px solid #c2bfbf;
 }
 
 .categoryBox {
 	display: flex;
 	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.dataBoxContainer + .dataBoxContainer {
+		border-left: none;
+		border-top: 1px solid #c2bfbf;
+	}
 }

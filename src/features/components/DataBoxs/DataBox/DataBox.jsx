@@ -5,7 +5,7 @@ import styles from './DataBox.module.css';
 
 export default function DataBox({ ctgColor, category, number }) {
 	return (
-		<div className={styles.container}>
+		<div className={styles.dataBoxContainer}>
 			<Typography variant='h4' color='secondary'>
 				<CountUp start={0} end={number} duration={1.5} separator=',' />
 			</Typography>
