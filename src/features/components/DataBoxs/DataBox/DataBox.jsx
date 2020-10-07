@@ -25,7 +25,7 @@ export default function DataBox({ ctgColor, category, number }) {
 			</div>
 
 			<Typography color='secondary'>
-				Total people {category} from covid-19 by {new Date().toDateString()}
+				Total reported {category.toString().toLowerCase()} from covid-19 by {new Date().toDateString()}
 			</Typography>
 		</div>
 	);

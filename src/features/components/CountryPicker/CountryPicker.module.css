@@ -1,4 +1,4 @@
-.container {
+.countryPickerContainer {
 	background: #ffffff;
 	height: 60px;
 	width: 100%;
@@ -10,7 +10,7 @@
 	color: #444444;
 }
 
-.container p {
+.countryPickerContainer p {
 	margin: 0 10px 0 5px;
 	font-weight: 600;
 }
@@ -21,4 +21,5 @@
 
 .formControl select {
 	text-indent: 10px;
+	color: #444444;
 }

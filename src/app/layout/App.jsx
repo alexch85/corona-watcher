@@ -25,9 +25,6 @@ function App() {
 		const fetchedData = await fetchData(country);
 		setData(fetchedData);
 		setCountry(country);
-
-		console.log(fetchedData);
-		console.log(country);
 	};
 
 	return (

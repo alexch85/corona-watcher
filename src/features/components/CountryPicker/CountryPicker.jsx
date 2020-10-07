@@ -15,7 +15,7 @@ export default function CountryPicker({ handleCountryChange }) {
 		fetchAPI();
 	}, [setFetchedCountries]);
 	return (
-		<div className={styles.container}>
+		<div className={styles.countryPickerContainer}>
 			<LanguageIcon size='1.3em' /> <p>Select Region:</p>
 			<FormControl className={styles.formControl}>
 				<NativeSelect color='primary' defaultValue='' onChange={(e) => handleCountryChange(e.target.value)}>

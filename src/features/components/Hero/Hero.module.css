@@ -1,4 +1,4 @@
-.container {
+.heroContainer {
 	background-image: url('/images/bg-1.jpg');
 	background-size: cover;
 	height: 300px;
@@ -9,21 +9,21 @@
 	align-items: center;
 }
 
-.container img {
+.heroContainer img {
 	width: 400px;
 }
 
 @media (max-width: 1570px) {
-	.container {
+	.heroContainer {
 		background-image: url('/images/bg.jpg');
 	}
 }
 
 @media (max-width: 768px) {
-	.container {
+	.heroContainer {
 		height: 200px;
 	}
-	.container img {
+	.heroContainer img {
 		width: 300px;
 	}
 }

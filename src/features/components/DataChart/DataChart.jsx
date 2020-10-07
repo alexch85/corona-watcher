@@ -25,9 +25,15 @@ export default function DataChart({ data: { cases, recovered, deaths }, country 
 						fill: true,
 					},
 					{
+						data: dailyData.activeArray.map((active) => active),
+						label: 'Active',
+						borderColor: '#1787e5',
+						fill: true,
+					},
+					{
 						data: dailyData.recoveredArray.map((recovered) => recovered),
 						label: 'Recovered',
-						borderColor: '#16ffcd',
+						borderColor: '#17e590',
 						fill: true,
 					},
 					{
@@ -46,12 +52,12 @@ export default function DataChart({ data: { cases, recovered, deaths }, country 
 	const barChart = cases ? (
 		<Bar
 			data={{
-				labels: ['Infected', 'Recovered', 'Deaths'],
+				labels: ['Infected', 'Active', 'Recovered', 'Deaths'],
 				datasets: [
 					{
 						label: 'People',
-						backgroundColor: ['#f9903c', '#16ffcd', ' #f36060'],
-						data: [cases, recovered, deaths],
+						backgroundColor: ['#f9903c', '#1787e5', '#17e590', ' #f36060'],
+						data: [cases, cases - recovered, recovered, deaths],
 					},
 				],
 			}}
@@ -61,5 +67,5 @@ export default function DataChart({ data: { cases, recovered, deaths }, country 
 			}}
 		/>
 	) : null;
-	return <div className={styles.container}>{country ? barChart : lineChart}</div>;
+	return <div className={styles.dataChartContainer}>{country ? barChart : lineChart}</div>;
 }

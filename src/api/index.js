@@ -12,7 +12,7 @@ export const fetchData = async (country) => {
 		const {
 			data: { cases, recovered, deaths, updated },
 		} = await axios.get(changeableUrl);
-		console.log(cases, recovered, deaths, updated);
+		console.log(recovered);
 		return { cases, recovered, deaths, updated };
 	} catch (error) {
 		alert('Something went wrong');
@@ -24,7 +24,6 @@ export const fetchCountries = async () => {
 		const { data } = await axios.get('https://disease.sh/v3/covid-19/countries');
 		return data.map((countryData) => countryData.country);
 	} catch (error) {
-		console.log(error);
 		alert('Something went wrong');
 	}
 };
@@ -38,19 +37,23 @@ export const fetchDailyData = async () => {
 	try {
 		const {
 			data: { cases, deaths, recovered },
-		} = await axios.get('https://disease.sh/v3/covid-19/historical/all?lastdays=70');
+		} = await axios.get('https://disease.sh/v3/covid-19/historical/all?lastdays=60');
 		const datesArray = Object.keys(cases).map((key) => key);
 		const casesArray = getValues(cases);
 		const deathsArray = getValues(deaths);
 		const recoveredArray = getValues(recovered);
+		const activeArray = [];
+
+		for (let i = 0; i <= casesArray.length; i++) activeArray.push(casesArray[i] - recoveredArray[i]);
 
 		const modifiedData = {
 			datesArray: datesArray,
 			casesArray: casesArray,
 			deathsArray: deathsArray,
 			recoveredArray: recoveredArray,
+			activeArray: activeArray,
 		};
-		console.log(modifiedData);
+
 		return modifiedData;
 	} catch (error) {
 		alert('Something went wrong...');
