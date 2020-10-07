@@ -5,6 +5,12 @@
 	flex-flow: column nowrap;
 	align-items: center;
 }
+
 .container + .container {
 	border-left: 1px solid #c2bfbf;
+}
+
+.categoryBox {
+	display: flex;
+	align-items: center;
 }
