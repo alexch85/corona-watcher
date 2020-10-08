@@ -7,7 +7,12 @@
 	justify-content: center;
 	align-self: flex-end;
 	box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.2);
-	color: #444444;
+	color: #777777;
+}
+
+.dark {
+	background-color: #1a1f22;
+	color: #777777;
 }
 
 .countryPickerContainer p {
@@ -21,5 +26,14 @@
 
 .formControl select {
 	text-indent: 10px;
-	color: #444444;
+	color: #333333;
+}
+
+.formControlDark {
+	max-width: 200px;
+}
+
+.formControlDark select {
+	text-indent: 10px;
+	color: #777777;
 }

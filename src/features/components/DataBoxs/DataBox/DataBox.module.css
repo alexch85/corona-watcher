@@ -4,10 +4,12 @@
 	display: flex;
 	flex-flow: column nowrap;
 	align-items: center;
+	/* box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.1); */
+	/* border-radius: 5px; */
 }
 
 .dataBoxContainer + .dataBoxContainer {
-	border-left: 1px solid #c2bfbf;
+	border-left: 1px solid #777777;
 }
 
 .categoryBox {

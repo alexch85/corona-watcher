@@ -8,11 +8,14 @@ import Hero from '../../features/components/Hero/Hero';
 
 import { fetchData } from '../../api/index';
 
-import { Typography } from '@material-ui/core';
+import { Switch, Typography } from '@material-ui/core';
+
+import cx from 'classnames';
 
 function App() {
 	const [data, setData] = useState({});
 	const [country, setCountry] = useState('');
+	const [darkMode, setDarkMode] = useState(false);
 
 	useEffect(() => {
 		const fetchAPI = async () => {
@@ -27,21 +30,38 @@ function App() {
 		setCountry(country);
 	};
 
+	const handleDarkMode = () => {
+		setDarkMode(!darkMode);
+		console.log(darkMode);
+	};
+
 	return (
-		<div className={styles.App}>
+		<div className={darkMode ? cx(styles.AppContanier, styles.dark) : styles.AppContanier}>
 			<Hero />
-			<CountryPicker handleCountryChange={handleCountryChange} />
+			<CountryPicker darkMode={darkMode} handleCountryChange={handleCountryChange} />
 			<div className={styles.AppContent}>
+				<div className={styles.darkModeControl}>
+					<Typography color='secondary'>
+						<b>Dark mode:</b>
+					</Typography>
+					<Switch
+						checked={darkMode}
+						onChange={handleDarkMode}
+						color='primary'
+						name='dark mode'
+						inputProps={{ 'aria-label': 'primary checkbox' }}
+					/>
+				</div>
 				<Typography
 					variant='h5'
 					color='secondary'
 					style={{
-						margin: '15px 0',
+						margin: '20px 0',
 					}}
 				>
 					{new Date().toDateString()}
 				</Typography>
-				<DataBoxs data={data} />
+				<DataBoxs darkMode={darkMode} data={data} />
 				<DataChart data={data} country={country} />
 			</div>
 		</div>

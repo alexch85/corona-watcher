@@ -3,8 +3,19 @@ import styles from './CountryPicker.module.css';
 import LanguageIcon from '@material-ui/icons/Language';
 import { FormControl, NativeSelect } from '@material-ui/core';
 import { fetchCountries } from '../../../api';
+import { withStyles } from '@material-ui/core/styles';
+import cx from 'classnames';
 
-export default function CountryPicker({ handleCountryChange }) {
+const MyNativeSelect = withStyles({
+	root: {
+		width: 200,
+	},
+	icon: {
+		color: '#777777',
+	},
+})(NativeSelect);
+
+export default function CountryPicker({ handleCountryChange, darkMode }) {
 	const [fetchedCountries, setFetchedCountries] = useState([]);
 
 	useEffect(() => {
@@ -15,17 +26,17 @@ export default function CountryPicker({ handleCountryChange }) {
 		fetchAPI();
 	}, [setFetchedCountries]);
 	return (
-		<div className={styles.countryPickerContainer}>
+		<div className={darkMode ? cx(styles.countryPickerContainer, styles.dark) : styles.countryPickerContainer}>
 			<LanguageIcon size='1.3em' /> <p>Select Region:</p>
-			<FormControl className={styles.formControl}>
-				<NativeSelect color='primary' defaultValue='' onChange={(e) => handleCountryChange(e.target.value)}>
+			<FormControl className={darkMode ? styles.formControlDark : styles.formControl}>
+				<MyNativeSelect color='primary' defaultValue='' onChange={(e) => handleCountryChange(e.target.value)}>
 					<option value=''>Global</option>
 					{fetchedCountries.map((country, i) => (
 						<option value={country} key={i}>
 							{country}
 						</option>
 					))}
-				</NativeSelect>
+				</MyNativeSelect>
 			</FormControl>
 		</div>
 	);

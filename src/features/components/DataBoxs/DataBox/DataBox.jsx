@@ -16,7 +16,7 @@ export default function DataBox({ ctgColor, category, number }) {
 						height: '20px',
 						margin: '10px 0',
 						backgroundColor: ctgColor,
-						marginRight: '5px',
+						marginRight: '10px',
 					}}
 				/>
 				<Typography variant='h5' color='secondary'>

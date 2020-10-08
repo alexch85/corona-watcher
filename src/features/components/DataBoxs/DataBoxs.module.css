@@ -1,6 +1,12 @@
 .dataBoxsContainer {
 	display: flex;
 	justify-content: center;
+	background: #ffffff;
+}
+
+.dark {
+	background-color: #1a1f22;
+	color: #777777;
 }
 
 @media (max-width: 768px) {
