@@ -3,11 +3,12 @@
 	justify-content: center;
 	background: #ffffff;
 	padding: 0 20px;
+	color: #333333;
 }
 
 .dark {
 	background-color: #1a1f22;
-	color: #777777;
+	color: #ffffff;
 }
 
 @media (max-width: 768px) {

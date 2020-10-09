@@ -6,7 +6,7 @@ import styles from './DataBox.module.css';
 export default function DataBox({ ctgColor, category, number }) {
 	return (
 		<div className={styles.dataBoxContainer}>
-			<Typography variant='h4' color='secondary'>
+			<Typography variant='h4'>
 				<CountUp start={0} end={number} duration={1.5} separator=',' />
 			</Typography>
 			<div className={styles.categoryBox}>
@@ -19,9 +19,7 @@ export default function DataBox({ ctgColor, category, number }) {
 						marginRight: '10px',
 					}}
 				/>
-				<Typography variant='h5' color='secondary'>
-					{category}
-				</Typography>
+				<Typography variant='h5'>{category}</Typography>
 			</div>
 
 			<Typography color='secondary'>

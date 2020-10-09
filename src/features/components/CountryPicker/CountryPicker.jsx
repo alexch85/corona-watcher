@@ -11,7 +11,7 @@ const MyNativeSelect = withStyles({
 		width: 200,
 	},
 	icon: {
-		color: '#777777',
+		color: '#666666',
 	},
 })(NativeSelect);
 
@@ -30,9 +30,11 @@ export default function CountryPicker({ handleCountryChange, darkMode }) {
 			<LanguageIcon size='1.3em' /> <p>Select Region:</p>
 			<FormControl className={darkMode ? styles.formControlDark : styles.formControl}>
 				<MyNativeSelect color='primary' defaultValue='' onChange={(e) => handleCountryChange(e.target.value)}>
-					<option value=''>Global</option>
+					<option style={{ color: 'black' }} value=''>
+						Global
+					</option>
 					{fetchedCountries.map((country, i) => (
-						<option value={country} key={i}>
+						<option style={{ color: 'black' }} value={country} key={i}>
 							{country}
 						</option>
 					))}

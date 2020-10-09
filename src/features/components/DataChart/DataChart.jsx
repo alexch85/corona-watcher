@@ -3,7 +3,7 @@ import styles from './DataChart.module.css';
 import { fetchDailyData } from '../../../api/index';
 import { Line, Bar } from 'react-chartjs-2';
 
-export default function DataChart({ data: { cases, recovered, deaths }, country }) {
+export default function DataChart({ data: { cases, recovered, deaths }, country, darkMode }) {
 	const [dailyData, setDailyData] = useState({});
 
 	useEffect(() => {
@@ -46,6 +46,14 @@ export default function DataChart({ data: { cases, recovered, deaths }, country 
 			}}
 			width={100}
 			height={50}
+			options={{
+				legend: {
+					labels: {
+						// This more specific font property overrides the global property
+						fontColor: darkMode ? '#ffffff' : '#333333',
+					},
+				},
+			}}
 		/>
 	) : null;
 
@@ -63,7 +71,15 @@ export default function DataChart({ data: { cases, recovered, deaths }, country 
 			}}
 			options={{
 				legend: { display: false },
-				title: { display: true, text: `Current state in ${country}` },
+				labels: {
+					// This more specific font property overrides the global property
+					fontColor: 'red',
+				},
+				title: {
+					display: true,
+					text: `Current state in ${country}`,
+					fontColor: darkMode ? '#ffffff' : '#333333',
+				},
 			}}
 		/>
 	) : null;

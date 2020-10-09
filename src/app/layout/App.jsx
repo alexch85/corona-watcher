@@ -32,7 +32,6 @@ function App() {
 
 	const handleDarkMode = () => {
 		setDarkMode(!darkMode);
-		console.log(darkMode);
 	};
 
 	return (
@@ -40,10 +39,8 @@ function App() {
 			<Hero />
 			<CountryPicker darkMode={darkMode} handleCountryChange={handleCountryChange} />
 			<div className={styles.AppContent}>
-				<div className={styles.darkModeControl}>
-					<Typography color='secondary'>
-						<b>Dark mode:</b>
-					</Typography>
+				<div className={darkMode ? cx(styles.darkModeControl, styles.dark) : styles.darkModeControl}>
+					<Typography>Dark mode:</Typography>
 					<Switch
 						checked={darkMode}
 						onChange={handleDarkMode}
@@ -54,7 +51,6 @@ function App() {
 				</div>
 				<Typography
 					variant='h5'
-					color='secondary'
 					style={{
 						margin: '10px 0 15px',
 					}}
@@ -62,7 +58,7 @@ function App() {
 					{new Date().toDateString()}
 				</Typography>
 				<DataBoxs darkMode={darkMode} data={data} />
-				<DataChart data={data} country={country} />
+				<DataChart data={data} country={country} darkMode={darkMode} />
 			</div>
 		</div>
 	);
