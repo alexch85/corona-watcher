@@ -56,7 +56,7 @@ function App() {
 					variant='h5'
 					color='secondary'
 					style={{
-						margin: '20px 0',
+						margin: '10px 0 15px',
 					}}
 				>
 					{new Date().toDateString()}

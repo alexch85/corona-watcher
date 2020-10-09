@@ -22,7 +22,7 @@ body {
 	display: flex;
 	flex-flow: column;
 	margin: 10px auto 0;
-	padding: 0 20px 20px;
+	padding: 0 20px 30px;
 	position: relative;
 }
 
@@ -40,7 +40,7 @@ body {
 @media (max-width: 768px) {
 	.AppContent {
 		max-width: 80%;
-		padding: 0;
+		padding: 0 0 30px 0;
 	}
 	.darkModeControl {
 		align-self: center;
