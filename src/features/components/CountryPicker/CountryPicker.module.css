@@ -1,39 +1,57 @@
 .countryPickerContainer {
-	background: #ffffff;
-	height: 60px;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	align-self: flex-end;
-	box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.2);
-	color: #333333;
+  background: linear-gradient(45deg, #0083b0, #00b4db);
+  height: 60px;
+  margin: 10px auto 30px;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  border-radius: 30px;
+  box-shadow: 0px 3px 11px -1px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 .dark {
-	background-color: #1a1f22;
-	color: #ffffff;
+  background: #1a1f22;
+  color: #ffffff;
 }
 
 .countryPickerContainer p {
-	margin: 0 5px 0 2px;
-	font-weight: 600;
+  margin: 0 5px 0 2px;
+  font-weight: 300;
+}
+
+.countryPickerContainer select {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  padding: 2px;
+  font-size: 1rem;
+}
+
+.countryPickerContainer select:hover,
+.countryPickerContainer select:active,
+.countryPickerContainer select:focus {
+  outline: none;
+  cursor: pointer;
 }
 
 .formControl {
-	max-width: 200px;
+  max-width: 150px;
 }
 
 .formControl select {
-	text-indent: 10px;
-	color: #333333;
+  text-indent: 5px;
+  color: #fff;
 }
 
 .formControlDark {
-	max-width: 200px;
+  max-width: 150px;
 }
 
 .formControlDark select {
-	text-indent: 10px;
-	color: #999999;
+  text-indent: 10px;
+  color: #999999;
 }

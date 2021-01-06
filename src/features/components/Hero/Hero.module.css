@@ -1,23 +1,24 @@
 .heroContainer {
-	background-image: url('https://i.postimg.cc/xjgW6ZT5/bg-1.jpg');
-	background-size: cover;
-	height: 300px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 0 0 20px 20px;
+  border-bottom: 1px solid #267a9f; */
 }
 
 .heroContainer img {
-	width: 400px;
+  margin: 30px auto 15px;
+  width: 250px;
 }
 
 @media (max-width: 768px) {
-	.heroContainer {
-		height: 200px;
-	}
-	.heroContainer img {
-		width: 300px;
-	}
+  .heroContainer {
+    height: 200px;
+  }
+  .heroContainer img {
+    width: 200px;
+    margin: 30px auto 5px;
+  }
 }
