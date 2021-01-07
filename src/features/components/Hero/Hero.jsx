@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.css';
-import logo from '../../../assets/1x/logo.png';
-import logoDarkMode from '../../../assets/1x/logo-darkmode.png';
+import logo from '../../../assets/logos/logo.png';
+import logoDarkMode from '../../../assets/logos/logo-darkmode.png';
 
 export default function Hero({ darkMode }) {
   return (

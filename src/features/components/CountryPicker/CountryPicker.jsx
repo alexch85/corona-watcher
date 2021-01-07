@@ -13,7 +13,7 @@ export default function CountryPicker({
   darkMode,
 }) {
   const [fetchedCountries, setFetchedCountries] = useState([]);
-
+  //fetch countries list
   useEffect(() => {
     const fetchAPI = async () => {
       setFetchedCountries(await fetchCountries());

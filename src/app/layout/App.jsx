@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './App.module.css';
 
+import { daysInWeek, monthInYear } from '../../utils/index';
+
 import CountryPicker from '../../features/components/CountryPicker/CountryPicker';
 import DataBoxs from '../../features/components/DataBoxs/DataBoxs';
 import DataChart from '../../features/components/DataChart/DataChart';
@@ -9,6 +11,7 @@ import Hero from '../../features/components/Hero/Hero';
 import { fetchData } from '../../api/index';
 
 import { Switch, Typography } from '@material-ui/core';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 import cx from 'classnames';
 
@@ -18,6 +21,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
+    //fetch covid data from API
     const fetchAPI = async () => {
       setData(await fetchData());
     };
@@ -25,11 +29,14 @@ function App() {
   }, []);
 
   const handleCountryChange = async (country) => {
+    //fetch data by country
     const fetchedData = await fetchData(country);
     setData(fetchedData);
+    //set selected country
     setCountry(country);
   };
 
+  //dark mode switch toggle handler
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
   };
@@ -46,6 +53,7 @@ function App() {
             : styles.darkModeControl
         }>
         <div className={styles.darkModeSwitch}>
+          <Brightness4Icon color='primary' style={{ marginRight: '5px' }} />
           <Typography>Dark mode:</Typography>
           <Switch
             checked={darkMode}
@@ -64,7 +72,10 @@ function App() {
           color: '#777',
           fontWeight: '300',
         }}>
-        {new Date().toDateString()}
+        <Typography color='primary'>
+          {daysInWeek[new Date().getDay()]} {monthInYear[new Date().getMonth()]}{' '}
+          {new Date().getFullYear()}
+        </Typography>
       </Typography>
       <CountryPicker
         darkMode={darkMode}
