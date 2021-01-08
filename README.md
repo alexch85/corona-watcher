@@ -1,69 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo](https://i.postimg.cc/fRJ077Rh/coronawatcher-logo-github.jpg)
 
-## Available Scripts
+https://corona-watcher-71098.web.app/
 
-In the project directory, you can run:
+Coronawatcher covid-19 tracker app
 
-### `npm start`
+A React project I created to raise awareness of the growing corona pandemic through the visual presentation of real-time data fetched from a popular covid-19 API, users can filter data by country and choose between regular and dark mode.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Technologies used: React, Chart JS for data representation, Material UI.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Project Screen Shots
 
-### `npm test`
+![homepage](https://i.postimg.cc/wjGj9SzC/coronawatcher-desktop.jpg)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![barbells-page](https://i.postimg.cc/h4LvVy8m/coronawatcher-darkmode-desktop.jpg)
 
-### `npm run build`
+![contact-page](https://i.postimg.cc/ydBw0ppM/powerstore-desktop-contact.jpg)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![mobile-homepage](https://i.postimg.cc/65zQm8m5/coronawatcher-mobile.jpg)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![mobile-cart](https://i.postimg.cc/RVvFd7GD/coronawatcher-darkmode-mobile.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation and Setup Instructions
 
-### `npm run eject`
+#### Example:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Installation:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`npm install`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To Run Test Suite:
 
-## Learn More
+`npm test`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To Start Server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm start`
 
-### Code Splitting
+To Visit App:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# corona-watcher
+`localhost:3000/`
