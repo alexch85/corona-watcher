@@ -22,8 +22,8 @@ export default function DataBox({ ctgColor, category, number }) {
 				<Typography variant='h5'>{category}</Typography>
 			</div>
 
-			<Typography color='secondary'>
-				Total reported {category.toString().toLowerCase()} from covid-19 by {new Date().toDateString()}
+			<Typography color='secondary' variant='text'>
+				Total reported {category.toString().toLowerCase()} cases by {new Date().toDateString()}
 			</Typography>
 		</div>
 	);
