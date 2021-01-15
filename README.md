@@ -12,13 +12,13 @@ The goal of this project was to practice fetching data from a remote API. Modify
 
 ![homepage](https://i.postimg.cc/wjGj9SzC/coronawatcher-desktop.jpg)
 
-![barbells-page](https://i.postimg.cc/h4LvVy8m/coronawatcher-darkmode-desktop.jpg)
+![darkmode-page](https://i.postimg.cc/h4LvVy8m/coronawatcher-darkmode-desktop.jpg)
 
-![contact-page](https://i.postimg.cc/g2J0FGCy/coronawatcher-desktop-2.jpg)
+![menu-page](https://i.postimg.cc/g2J0FGCy/coronawatcher-desktop-2.jpg)
 
-![mobile-homepage](https://i.postimg.cc/65zQm8m5/coronawatcher-mobile.jpg)
+![mobile-page](https://i.postimg.cc/65zQm8m5/coronawatcher-mobile.jpg)
 
-![mobile-cart](https://i.postimg.cc/RVvFd7GD/coronawatcher-darkmode-mobile.jpg)
+![mobile-darkmode](https://i.postimg.cc/RVvFd7GD/coronawatcher-darkmode-mobile.jpg)
 
 ## Installation and Setup Instructions
 
